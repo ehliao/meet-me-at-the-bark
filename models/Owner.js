@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, Sequelize } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
@@ -16,9 +16,16 @@ Owner.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
+        first_name: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        last_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        profilePhoto: {
+            type: Sequelize.BLOB, // can use third party API Cloudinary per Lilo
         },
         email: {
             type: DataTypes.STRING,

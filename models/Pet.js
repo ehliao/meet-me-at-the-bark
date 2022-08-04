@@ -15,6 +15,9 @@ Pet.init(
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        profilePhoto: {
+            type: Sequelize.BLOB, // can use third  party API cloudinary per Lilo
+        },
         breed: {
             type: DataTypes.STRING,
         },
