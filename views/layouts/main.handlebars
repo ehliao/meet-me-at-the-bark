@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/public/css/jass.js">
-  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="./css/style.css">
   <title>Meet Me At The Bark</title>
 
 </head>
 
 <body>
+
   <div class="pageHeader">
     <h1>Meet Me at the Bark</h1>
       <div>
@@ -38,16 +39,53 @@
 
       <main class="container">
         {{!-- sub layout --}}
+        {{{body}}}
       </main>
   </div>
-
-  <div class="jumbtron">
-    <h1>Meet Me at the Bark</h1>
+    <nav>
+        <!-- {{#if logged_in}}
+        {{!-- links to profile.handlebars --}} -->
+      <a class="navBtn" href="/views/profile.handlebars">My Profile</a>
+      <a class="navBtn" id="logout">Logout</a>
+        <!-- {{else}}
+        {{!-- links to signup and login handlebars --}} -->
+      <a class="navBtn" href="/views/signup.handlebars">Sign Up</a>
+      <a class="navBtn" href="/views/login.handlebars">Login</a>  
+        <!-- {{/if}}           -->
+    </nav>
   </div>
 
-  {{#if logged_in}}
+  <main class="uk-background-muted container">
+    <!-- {{!-- sub layout --}} -->
+
+
+    <!-- jumbotron section, below nav bar -->
+    <div class="jumbotron">
+      <img class="dogGroup" src="./images/dog-jumbotron.jpg" alt="dog group">
+    </div>
+
+    <div id="about-us">
+      <p class="uk-text-center intro">
+        Meet Me At The Bark provides the convenience of meeting with fellow dogs and owners within your local community
+      </p>
+
+    </div>
+
+    <!-- testimonial section -->
+    <div class=uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
+      <div></div>
+      <div></div>
+    </div>
+
+
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/js/uikit-icons.min.js"></script>
+  <!-- {{#if logged_in}} -->
   <script src="/public/js/logout.js"></script>
-  {{/if}}
-    
+  <!-- {{/if}} -->
+
 </body>
 </html>
