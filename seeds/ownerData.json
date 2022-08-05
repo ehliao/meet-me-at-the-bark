@@ -1,10 +1,16 @@
 [
     {
         "first_name": "Eric",
-        "last_name": "Rosas",
-        "email": "eric.rosas@kmail.com",
+        "last_name": "R",
+        "email": "eric.r@kmail.com",
         "password": "9dsl3nc24!",
-        "zipcode": "85641",
-        "interests": "hiking, coding, astronomy"
+        "zipcode": 85641
+    },
+    {
+        "first_name": "Dave",
+        "last_name": "D",
+        "email": "d.r@kmail",
+        "password": "147Fvgb93$",
+        "zipcode": 91356
     }
 ]

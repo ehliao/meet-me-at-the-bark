@@ -3,7 +3,14 @@
         "name": "Maddie",
         "breed": "Schnauzer",
         "owner_id": 1, 
+        "profilePhoto": "https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659635313/Pet%20Profile%20Photos/Maddie_yb28et.jpg",
         "dob": "07/12/2014"
-
-    }
+    },
+    {
+        "name": "Yogi",
+        "breed": "Husky",
+        "owner_id": 2, 
+        "profilePhoto": "https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659635631/Pet%20Profile%20Photos/Yogi_vacnuz.png",
+        "dob": "05/04/2021"
+}
 ]

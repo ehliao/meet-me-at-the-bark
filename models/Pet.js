@@ -12,11 +12,11 @@ Pet.init(
             autoIncrement: true,
         },
         name: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         profilePhoto: {
-            type: Sequelize.BLOB, // can use third  party API cloudinary per Lilo
+            type: DataTypes.STRING, // can use third  party API cloudinary per Lilo
         },
         breed: {
             type: DataTypes.STRING,

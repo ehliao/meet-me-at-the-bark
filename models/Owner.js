@@ -25,7 +25,7 @@ Owner.init(
             allowNull: false,
         },
         profilePhoto: {
-            type: Sequelize.BLOB, // can use third party API Cloudinary per Lilo
+            type: DataTypes.STRING, //need url for image
         },
         email: {
             type: DataTypes.STRING,
@@ -49,10 +49,6 @@ Owner.init(
                 len: [5],
             }
         },
-        interests: { //see how to code from pre-selected list
-            type: DataTypes.STRING,
-            allowNull: false,
-        }
 
     },
     {
