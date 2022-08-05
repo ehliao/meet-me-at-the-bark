@@ -8,14 +8,22 @@ router.get('/', async (req, res) => {
             include: [
                 {
                     model: Owner,
+
+                    attributes: ['name']
                     attributes: ['first_name', 'last_name']
+
                 },
             ],
         });
         const pets = petData.map((pet) => pet.get({ plain: true }));
+
+        res.render('mainpage', {
+            pets,
+
         console.log(pets);
         res.render('homepage', {
             pets:pets[0],
+
             logged_in: req.session.logged_in
         });
     } catch (err){
