@@ -65,8 +65,7 @@ nav {
 #form {
     border: 5px solid var(--font-color);
     border-radius: 5px;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin: 50px 30% 50px 30%;
 }
 
 .uk-margin {
