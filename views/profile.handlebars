@@ -1,0 +1,30 @@
+
+<div class="row">
+    <div class="col-auto">
+        <h2>Hello, {{Owner.name}}!</h2>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <h3>Here's my pet(s)</h3>
+
+        <div class="my-pet">
+            <div class="form-group">
+                <div class="picture">{{Pet.profilePhoto}}</div>
+                <div class="pet-name">{{Pet.name}}</div>
+                <div class="pet-breed">{{Pet.breed}}</div>
+                <div class="pet-age">{{Pet.dob}}</div>
+            </div>
+        </div>
+    </div>
+
+    <h3>These are my interests</h3>
+    <div class="my-interests">
+        <div class="interests">{{Owner.interest}}</div>
+    </div>
+</div>
+
+<script src="/public/js/profile.js"></script>
+{{!-- include photos --}}
+

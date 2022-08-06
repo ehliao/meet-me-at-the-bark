@@ -1,0 +1,72 @@
+:root {
+    --main-bg-color: #7E9693;
+    --font-color: rgb(232, 181, 105);
+}
+
+.pageHeader, #about-us {
+    display: flex;
+    background-color: var(--main-bg-color);
+}
+
+h3 {
+    margin: 17px 0 0 10px;
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+
+ul, li {
+    /* margin-top: 5%; */
+    display: inline-block;
+    list-style: none;
+}
+
+li {
+    margin-left: 10px;
+    font-size: 13pt;
+}
+
+a:link, a:visited {
+    color: white;
+}
+
+nav {
+    margin-left: 40%;
+    margin-top: 20px;
+
+
+}
+
+.navBtn {
+    padding: 1px 10px 0 10px;
+    border-radius: 8px;
+    font-size: 15pt;
+    color: white;
+    
+}
+
+.dogGroup {
+    width: 100%
+}
+
+.intro {
+    margin: 50px 10% 20px 10%;
+    font-size: 30pt;
+    color: var(--font-color);
+    font-weight: bold;
+}
+
+#form {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.uk-margin {
+    margin: 25px;
+}
+
+.signupHeader{
+    margin-top: 25px;
+}

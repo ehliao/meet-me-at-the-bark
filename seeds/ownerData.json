@@ -1,0 +1,67 @@
+[
+    {
+        "first_name": "Eric",
+        "last_name": "Rosas",
+        "profilePhoto:":"https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659802278/Owner%20Profile%20Photos/Eric_yjzo8g.png",
+        "email": "erosas@instructors.2u.com",
+        "password": "9dsl3nc24!",
+        "zipcode": 85719
+    },
+    {
+        "first_name": "Dave",
+        "last_name": "Dorado",
+        "profilePhoto:":"https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659802278/Owner%20Profile%20Photos/Dave_qtiadq.png",
+        "email": "d.r@kmail",
+        "password": "147Fvgb93$",
+        "zipcode": 91356
+    },
+    {
+        "first_name": "James",
+        "last_name": "Plasencia",
+        "profilePhoto:":"https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659802278/Owner%20Profile%20Photos/James_txancj.png",
+        "email": "jamesplasencia@gmail.com",
+        "password": "849Klpy84@",
+        "zipcode": 90028
+    },
+    {
+        "first_name": "Aleena",
+        "last_name": "Johns",
+        "profilePhoto:":"https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659802278/Owner%20Profile%20Photos/Aleena_km8asm.png",
+        "email": "aleenajohns31@gmail.com",
+        "password": "321MHws17&",
+        "zipcode": 92584
+    },
+    {
+        "first_name": "Sandra",
+        "last_name": "Mendoza",
+        "profilePhoto:":"https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659802278/Owner%20Profile%20Photos/Sandra_syht24.png",
+        "email": "sm@fmail.com",
+        "password": "942SMpm36%",
+        "zipcode": 90242
+    },
+    {
+        "first_name": "Elaine",
+        "last_name": "Liao",
+        "profilePhoto:":"https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659802279/Owner%20Profile%20Photos/Elaine_exunad.png",
+        "email": "EL@fmail.com",
+        "password": "374ELcx76!",
+        "zipcode": 91732
+    },
+    {
+        "first_name": "Shaggy",
+        "last_name": "Rogers",
+        "profilePhoto:":"https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659802499/Owner%20Profile%20Photos/Shaggy_uap2hh.png",
+        "email": "SR@fmail.com",
+        "password": "196SRym97*",
+        "zipcode": 45723
+    },
+    {
+        "first_name": "Peter",
+        "last_name": "Griffin",
+        "profilePhoto:":"https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659802499/Owner%20Profile%20Photos/Peter_m9d3lj.png",
+        "email": "PG@fmail.com",
+        "password": "085PGem21^",
+        "zipcode": 90046
+    }
+
+]
