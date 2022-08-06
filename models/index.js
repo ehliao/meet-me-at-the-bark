@@ -4,13 +4,9 @@ const OwnerInterest = require('./OwnerInterest');
 const Pet = require('./Pet');
 
 Owner.hasMany(Pet, {
-    
-})
-
-module.exports = { Owner, Pet };
     foreignKey: 'owner_id',
     onDelete: 'CASCADE'
-});
+}); 
 
 Pet.belongsTo(Owner, {
     foreignKey: 'owner_id'
