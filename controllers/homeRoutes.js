@@ -13,15 +13,15 @@ router.get('/', async (req, res) => {
             ],
         });
         const pets = petData.map((pet) => pet.get({ plain: true }));
-        console.log(pets);
-        res.render('main', {
-            pets: pets[0],
-            logged_in: req.session.logged_in
-        });
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
+            console.log(pets);
+            res.render('homepage', {
+                pets: pets[0],
+                logged_in: req.session.logged_in
+            });
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    });
 
 router.get('/pet/:id', async (req, res) => {
     try {

@@ -14,6 +14,7 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
+
 // router.deleted('/:id', withAuth, async (req, res) => {
 //     try {
 //         const petData = await Pet.destroy({
@@ -31,6 +32,7 @@ router.post('/', withAuth, async (req, res) => {
 //         res.status(500).json(err);
 //     }
 // });
+
 
 
 module.exports = router;
