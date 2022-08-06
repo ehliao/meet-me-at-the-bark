@@ -1,28 +1,31 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 :root {
-    --main-bg-color: #7E9693;
+    --main-color: #7E9693;
     --font-color: rgb(232, 181, 105);
 }
 
-.pageHeader, #about-us {
+.pageHeader {
     display: flex;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-color);
 }
 
 h3 {
-    margin: 17px 0 0 10px;
+    margin: 15px 0 15px 10px;
     font-weight: bold;
     color: var(--font-color);
 }
 
 
 ul, li {
-    /* margin-top: 5%; */
     display: inline-block;
     list-style: none;
 }
 
 li {
-    margin-left: 10px;
+    margin: 20px 0 5px 15px;
     font-size: 13pt;
 }
 
@@ -33,12 +36,12 @@ a:link, a:visited {
 nav {
     margin-left: 40%;
     margin-top: 20px;
-
-
 }
 
 .navBtn {
-    padding: 1px 10px 0 10px;
+    padding: 1px 10px 1px 10px;
+    margin-left: 5px;
+    border: 2px solid var(--font-color);
     border-radius: 8px;
     font-size: 15pt;
     color: white;
@@ -50,14 +53,17 @@ nav {
 }
 
 .intro {
-    margin: 50px 10% 20px 10%;
+    margin: 0 12% 70px 12%;
+    padding-top: 70px;
     font-size: 30pt;
     color: var(--font-color);
     font-weight: bold;
 }
 
+
+
 #form {
-    border: 2px solid black;
+    border: 5px solid var(--font-color);
     border-radius: 5px;
     margin-left: 30%;
     margin-right: 30%;
@@ -67,6 +73,54 @@ nav {
     margin: 25px;
 }
 
-.signupHeader{
+.signupHeader, .loginHeader{
     margin-top: 25px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.uk-button:hover {
+    background-color: var(--main-color);
+    color: var(--font-color);
+}
+
+#about-us {
+    background-color: var(--main-color);
+}
+
+
+#testimonials {
+    color: var(--main-color);
+    margin: 20px 0 20px 0;
+    font-weight: bold;
+}
+
+.uk-card-body {
+    margin: 5px;
+}
+
+.testimonial-grid {
+    margin: 20px 10px 20px 10px;
+}
+
+footer {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.about-us-section {
+    color: white;
+    font-size: 20pt;
+    padding-bottom: 20px;
+}
+
+#similar-section {
+    margin: 0 20px 20px 20px;
+}
+
+#similar {
+    margin: 0 80px 30px 80px;
+    border-radius: 15px;
+    font-size: large;
+
 }

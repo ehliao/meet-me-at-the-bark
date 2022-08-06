@@ -8,18 +8,12 @@ router.get('/', async (req, res) => {
             include: [
                 {
                     model: Owner,
-
-                    attributes: ['name']
                     attributes: ['first_name', 'last_name']
 
                 },
             ],
         });
         const pets = petData.map((pet) => pet.get({ plain: true }));
-
-        res.render('mainpage', {
-            pets,
-
         console.log(pets);
         res.render('homepage', {
             pets:pets[0],
@@ -29,7 +23,7 @@ router.get('/', async (req, res) => {
     } catch (err){
         res.status(500).json(err);
     }
-});
+    });
 
 router.get('/pet/:id', async (req, res) => {
     try {
