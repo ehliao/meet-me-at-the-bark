@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pet, Owner } = require('../models');
+const { Pet, Owner, OwnerInterest } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -14,11 +14,11 @@ router.get('/', async (req, res) => {
         });
         const pets = petData.map((pet) => pet.get({ plain: true }));
         console.log(pets);
-        res.render('homepage', {
-            pets:pets[0],
+        res.render('main', {
+            pets: pets[0],
             logged_in: req.session.logged_in
         });
-    } catch (err){
+    } catch (err) {
         res.status(500).json(err);
     }
 });
@@ -47,7 +47,12 @@ router.get('/profile', withAuth, async (req, res) => {
     try {
         const ownerData = await Owner.findByPk(req.session.owner_id, {
             attributes: { exclude: ['password'] },
-            include: [{ model: Pet }],
+            include: [{
+                model: Pet
+            },
+            {
+                model: OwnerInterest
+            }],
         });
 
         const owner = ownerData.get({ plain: true });
@@ -67,6 +72,15 @@ router.get('/login', (req, res) => {
     }
 
     res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/profile');
+        return;
+    }
+
+    res.render('signup');
 });
 
 module.exports = router;
