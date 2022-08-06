@@ -11,33 +11,32 @@
 </head>
 
 <body>
-  <div class="pageHeader"></divclass>
-    <h3>Meet Me at the Bark</h3>
-    <ul>
-      <li>
-        <a href="#about-us">About Us</a>
-      </li>
-      <li>
-        <a href="#testimonials">Testimonials</a>
-      </li>
-    </ul>
 
-      <nav>
-        {{#if logged_in}}
-        {{!-- links to profile.handlebars --}}
-        <a href="/views/profile.handlebars">My Profile</a>
-        <button class="logoutBtn" id="logout">Logout</button>
-        {{else}}
-        {{!-- links to signup and login handlebars --}}
-        <a href="/views/signup.handlebars">Sign Up</a>
-        <a href="/views/login.handlebars">Login</a>  
-        {{/if}}          
-      </nav>
+  <div class="pageHeader">
+    <h1>Meet Me at the Bark</h1>
+      <div>
+        <ul>
+          <li>
+            <a href="#about-us">About Us</a>
+          </li>
+          <li>
+            <a href="#testimonials">Testimonials</a>
+          </li>
+        </ul>
+      </div>
 
-      <main class="container">
-        {{!-- sub layout --}}
-        {{{body}}}
-      </main>
+  </div>
+    <nav>
+        <!-- {{#if logged_in}}
+        {{!-- links to profile.handlebars --}} -->
+      <a class="navBtn" href="/views/profile.handlebars">My Profile</a>
+      <a class="navBtn" id="logout">Logout</a>
+        <!-- {{else}}
+        {{!-- links to signup and login handlebars --}} -->
+      <a class="navBtn" href="/views/signup.handlebars">Sign Up</a>
+      <a class="navBtn" href="/views/login.handlebars">Login</a>  
+        <!-- {{/if}}           -->
+    </nav>
   </div>
 
   <main class="uk-background-muted container">
