@@ -27,11 +27,11 @@
 
     <nav>
       {{#if logged_in}}
-      <a class="navBtn" href="/views/profile.handlebars">My Profile</a>
+      <a class="navBtn" href="/profile">My Profile</a>
       <a class="navBtn" id="logout">Logout</a>
       {{else}}
-      <a class="navBtn" href="/views/signup.handlebars">Sign Up</a>
-      <a class="navBtn" href="/views/login.handlebars">Login</a>  
+      <a class="navBtn" href="../signup">Sign Up</a>
+      <a class="navBtn" href="/login">Login</a>  
       {{/if}}
     </nav>
   </div>
