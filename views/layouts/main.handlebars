@@ -13,29 +13,31 @@
 <body>
 
   <div class="pageHeader">
-    <h3>Meet Me at the Bark</h3>
+    <a class="title" href="/">Meet Me at the Bark</a>
       <div class="headerLinks">
-        <ul>
-          <li>
-            <a href="#about-us">About Us</a>
+        <ul class="headerUL">
+          <li class="headerList">
+            <a class="headerLink" href="#about-us">About Us</a>
           </li>
-          <li>
-            <a href="#testimonials">Testimonials</a>
+          <li class="headerList">
+            <a class="headerLink" href="#testimonials">Testimonials</a>
           </li>
         </ul>
       </div>
 
-<<<<<<< HEAD
-  </div>
-=======
->>>>>>> elaine-branch
     <nav>
       {{#if logged_in}}
-      <a class="navBtn" href="/profile">My Profile</a>
-      <a class="navBtn" id="logout">Logout</a>
+      <a class="uk-inline navBtn uk-button uk-button-default" id="profile" href="/profile">Profile</a>
+        <div uk-dropdown="mode: click">
+          <ul class="uk-nav uk-dropdown-nav">
+            <li class="uk-active"><a href="/owner">My Profile</a></li>
+              <li><a href="/pet">My Dog's Profile</a></li>
+          </ul> 
+        </div>
+      <a class="navBtn uk-button uk-button-default" id="logout">Logout</a>
       {{else}}
-      <a class="navBtn" href="../signup">Sign Up</a>
-      <a class="navBtn" href="/login">Login</a>  
+      <a class="navBtn uk-button uk-button-default" href="/signup">Sign Up</a>
+      <a class="navBtn uk-button uk-button-default" href="/login">Login</a>  
       {{/if}}
     </nav>
   </div>
@@ -54,7 +56,7 @@
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/js/uikit-icons.min.js"></script>
   {{#if logged_in}}
-  <script src="/public/js/logout.js"></script>
+  <script src="/js/logout.js"></script>
   {{/if}}
 
 </body>

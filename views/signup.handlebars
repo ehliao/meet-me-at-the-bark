@@ -18,13 +18,18 @@
         <input class="uk-input" type="password" placeholder ="Password" id="password-signup" />
       </div>
 
-      <div class="uk-margin form-group">
+      {{!-- <div class="uk-margin form-group">
         <input class="uk-input" type="text" placeholder ="Dog's Name" id="pet-name" />
-      </div>   
+      </div>    --}}
 
-      <div class="uk-margin form-group">
-        <label class="uk-text-left" id="pet_breed" for="form-stacked-text">Primary Dog Breed:</label>
-        <select class="uk-select" id="form-stacked-select" type="text">
+      {{!-- <form action="/action_page.php">
+        <label for="birthday">Dog's Date of Birth</label>
+        <input type="date" id="birthday" name="birthday">
+      </form> --}}
+
+      {{!-- <div class="uk-margin form-group">
+        <label class="uk-text-left" for="form-stacked-text">Primary Dog Breed:</label>
+        <select class="uk-select" id="pet-breed form-stacked-select" type="text">
           <option></option>
           <option>Australian Shepard</option>
           <option>Beagle</option>
@@ -46,35 +51,37 @@
           <option>Shih Tzu</option>
           <option>Yorkshire Terrier</option>
         </select>
-      </div>
+      </div> --}}
 
-      <div class="uk-margin form-group">
-        <label  class="uk-text-left"  for="form-stacked-select" id="owner_interest">Your Interests</label>
-        <select class="uk-select" id="form-stacked-select" for="owner_interest" type="text">
-          <option></option>
-          <option>Creative/Crafty</option>
-          <option>Homebody</option>
-          <option>Foodie/Gourmand</option>
-          <option>Outdoor Adventurer (hiking, biking, fishing, etc.)</option>
-          <option>Sports</option>
-          <option>Technology/Gaming</option>
-          <option>Travel</option>
-        </select>
-      </div>
+      {{!-- <div class="uk-margin form-group">
+        <label  class="uk-text-left"  for="form-stacked-select" id="owner_interest">Your Interests (Select all that apply): </label>
+            <label><input class="uk-checkbox" type="checkbox"> Cooking/Baking </label>
+            <label><input class="uk-checkbox" type="checkbox"> Creative/Crafty </label>
+            <label><input class="uk-checkbox" type="checkbox"> Foodie/Gourmand </label>
+            <label><input class="uk-checkbox" type="checkbox"> Homebody </label>
+            <label><input class="uk-checkbox" type="checkbox"> Outdoor Adventurer </label>
+            <label><input class="uk-checkbox" type="checkbox"> Sports </label>
+            <label><input class="uk-checkbox" type="checkbox"> Technology/Gaming </label>
+            <label><input class="uk-checkbox" type="checkbox"> Travel </label>
+      </div> --}}
 
       <div class="uk-margin">
         <input class="uk-input" type="number" min="0" max="99999" placeholder ="Zip Code" id="zipcode" />
       </div>
 
-      <form action="/action_page.php">
-        <input type="file" id="myFile" name="foo">
-        <input type="submit">
-      </form>
+      {{!-- <div class="uk-margin form-group">
+        <label class="uk-text-left" id="pet_breed" for="form-stacked-text">Upload Profile Image: </label>
+        <form action="/action_page.php">
+          <input type="file" id="myFile" name="foo">
+        </form>
+      </div> --}}
 
       <div class="uk-margin uk-text-center">
-        <button class="uk-button uk-button-default" type="submit">Sign Up!</button>
+        <button id="submitBtn" class="uk-button uk-button-default" type="submit">Sign Up!</button>
       </div>
 
 
     </form>
   </div>
+
+  <script src="./js/login.js"></script>
