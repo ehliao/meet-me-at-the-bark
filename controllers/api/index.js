@@ -1,10 +1,12 @@
 const router = require('express').Router();
 const ownerRoutes = require('./ownerRoutes');
 const petRoutes = require('./petRoutes');
-const ownerInterest = require('./ownerInterestRoutes');
+const ownerInterestRoutes = require('./ownerInterestRoutes');
+const fileUpload = require('./fileUpload');
 
 router.use('/owners', ownerRoutes);
 router.use('/pets', petRoutes);
-router.use('/ownerInterest', ownerInterest);
+router.use('/ownerInterest', ownerInterestRoutes);
+router.use('/fileUpload', fileUpload);
 
 module.exports = router;

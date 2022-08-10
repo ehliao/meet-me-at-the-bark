@@ -9,7 +9,7 @@
     {
         "name": "Yogi",
         "breed": "Husky",
-        "owner_id": 2,
+        "owner_id": 4,
         "profilePhoto": "https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659635631/Pet%20Profile%20Photos/Yogi_vacnuz.png",
         "dob": "05/04/2021"
     },
@@ -23,42 +23,42 @@
     {
         "name": "Bo",
         "breed": "Chihuahua and Mini Pinscher Mix",
-        "owner_id": 4,
+        "owner_id": 2,
         "profilePhoto": "https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659635859/Pet%20Profile%20Photos/Bo_qzsfdr.png",
         "dob": "01/09/2010"
     },
     {
         "name": "Turco",
         "breed": "Husky and Pitbull Mix",
-        "owner_id": 5,
+        "owner_id": 8,
         "profilePhoto": "https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659635397/Pet%20Profile%20Photos/Turco_fyrggw.jpg",
         "dob": "05/14/2017"
     },
     {
         "name": "Bonita",
         "breed": "Shephard Mix",
-        "owner_id": 6,
+        "owner_id": 7,
         "profilePhoto": "https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659635387/Pet%20Profile%20Photos/Bonita_yl6puz.jpg",
         "dob": "04/01/2013"
     },
     {
         "name": "Dakota",
         "breed": "Beagle and Retriever Mix",
-        "owner_id": 6,
+        "owner_id": 7,
         "profilePhoto": "https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659635633/Pet%20Profile%20Photos/Dakota_pvsaii.png",
         "dob": "06/01/2015"
     },
     {
         "name": "Scooby",
         "breed": "Great Dane",
-        "owner_id": 7,
+        "owner_id": 5,
         "profilePhoto": "https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659722116/Pet%20Profile%20Photos/Scooby_i9kvz4.png",
         "dob": "09/13/1969"
     },
     {
         "name": "Brian",
         "breed": "White Labrador",
-        "owner_id": 8,
+        "owner_id": 6,
         "profilePhoto": "https://res.cloudinary.com/ucla-coding-bootcamp-team-3/image/upload/v1659722379/Pet%20Profile%20Photos/Brian_gw2oj1.png",
         "dob": "02/05/1993"
     }

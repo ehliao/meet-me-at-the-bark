@@ -1,4 +1,4 @@
-const { Model, DataTypes, Sequelize } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
@@ -26,6 +26,7 @@ Owner.init(
         },
         profilePhoto: {
             type: DataTypes.STRING, //need url for image
+            allowNull: true,
         },
         email: {
             type: DataTypes.STRING,
