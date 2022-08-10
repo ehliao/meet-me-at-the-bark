@@ -1,28 +1,99 @@
-<div class="row">
-    <div class="col-auto">
-        <h2>Hello, {{Owner.first_name}}!</h2>
-    </div>
-</div>
+<div id="profileImage" class="uk-background-cover" data-src="./images/profileimage.jpg" uk-img>
+  <div class="col-auto">
+    <h2 class="profileTitle">Welcome back, {{first_name}}!</h2>
 
-<div class="row mt-4">
-    <div class="col-md-6">
-        <h3>Here's my pet(s)</h3>
+  </div>
 
-        <div class="my-pet">
-            <div class="form-group">
-                <div class="picture">{{Pet.profilePhoto}}</div>
-                <div class="pet-name">{{Pet.name}}</div>
-                <div class="pet-breed">{{Pet.breed}}</div>
-                <div class="pet-age">{{Pet.dob}}</div>
-            </div>
-        </div>
-    </div>
-
-    <h3>These are my interests</h3>
+    <h4>These are my interests:</h4>
+    {{#each ownerInterests as |ownerInterest| }}
     <div class="my-interests">
-        <div class="interests">{{Owner.interest}}</div>
+      <div class="interests">{{[ownerInterest.interest_id]}}</div>
     </div>
-    {{#each pets as |pet| }}
+    {{/each}}
+
+
+  <div class="row">
+    <div class=".uk-column-1-6">
+      <h4>Here's my pet(s):</h4>
+      <div class="my-pet">
+        {{#each pets as |pet| }}
+        <div class="form-group">
+          <div class="pet-name">Name: {{pet.name}}</div>
+          <div class="pet-breed">Breed: {{pet.breed}}</div>
+          <img src="{{pet.profilePhoto}}" class="picture" height="300px" width="300px">
+          <div class="pet-age">DOB: {{format_date pet.dob}}</div>
+        </div>
+        {{/each}}
+
+      </div>
+
+      <div class="uk-margin profile-group">
+        <input class="uk-input" type="text" placeholder="Dog's Name" id="pet-name" />
+      </div>
+
+      <div class="uk-margin profile-group">
+        <label class="uk-text-left" for="form-stacked-text">Primary Dog Breed:</label>
+        <select class="uk-select" id="breed form-stacked-select" type="text">
+          <option id="breedOption"></option>
+          <option id="breedOption">Australian Shepard</option>
+          <option id="breedOption">Beagle</option>
+          <option id="breedOption">Chihuahua</option>
+          <option id="breedOption">Corgi</option>
+          <option id="breedOption">Dalmation</option>
+          <option id="breedOption">Doberman</option>
+          <option id="breedOption">French Bulldog</option>
+          <option id="breedOption">German Shepard</option>
+          <option id="breedOption">Golden Retriever</option>
+          <option id="breedOption">Great Dane</option>
+          <option id="breedOption">Pinscher - Miniature</option>
+          <option id="breedOption">Pit Bull Terrier</option>
+          <option id="breedOption">Poodle</option>
+          <option id="breedOption">Pomeranian</option>
+          <option id="breedOption">Labrador Retriever</option>
+          <option id="breedOption">Rottweiler</option>
+          <option id="breedOption">Schnauzer</option>
+          <option id="breedOption">Shih Tzu</option>
+          <option id="breedOption">Yorkshire Terrier</option>
+        </select>
+      </div>
+
+      <form id="birthdayForm" action="/action_page.php">
+        <label for="birthday">Dog's Date of Birth: </label>
+        <input type="date" id="birthday" name="birthday">
+      </form>
+
+
+    </div>
+
+
+
+
+    <div class="uk-margin profile-group">
+      <label class="uk-text-left" for="form-stacked-select" id="interest_id">Your Interests (Select all that apply):
+      </label>
+      <label class="uk-text-emphasis"><input class="checkbox" type="checkbox"> Cooking/Baking </label>
+      <label class="uk-text-emphasis"><input class="checkbox" type="checkbox"> Creative/Crafty </label>
+      <label class="uk-text-emphasis"><input class="checkbox" type="checkbox"> Foodie/Gourmand </label>
+      <label class="uk-text-emphasis"><input class="checkbox" type="checkbox"> Homebody </label>
+      <label class="uk-text-emphasis"><input class="checkbox" type="checkbox"> Outdoor Adventurer </label>
+      <label class="uk-text-emphasis"><input class="checkbox" type="checkbox"> Sports </label>
+      <label class="uk-text-emphasis"><input class="checkbox" type="checkbox"> Technology/Gaming </label>
+      <label class="uk-text-emphasis"><input class="checkbox" type="checkbox"> Travel </label>
+    </div>
+
+
+    <div class="uk-margin profile-group">
+      <label class="uk-text-left" id="pet_breed" for="form-stacked-text">Upload Profile Image: </label>
+      <form action="/action_page.php">
+        <input type="file" id="myFile" name="foo">
+      </form>
+    </div>
+
+    <div class="uk-margin">
+      <button id="saveBtn" class="uk-button uk-button-default" type="submit">Save</button>
+    </div>
+
+  {{#each pets as |pet| }}
     <div class="row mb-4 pet">
       <div class="col-md-5">
         <h2>
@@ -31,6 +102,15 @@
       </div>
     </div>
     {{/each}}
-</div>
 
-<script src="./js/profile.js"></script>
+
+
+
+
+{{!-- 
+    <div>
+      <button href="/ower">Edit My Profile</button>
+      <button href="/pet">Edit My Pet's Profile</button>
+    </div> --}}
+
+    <script src="./js/profile.js"></script>

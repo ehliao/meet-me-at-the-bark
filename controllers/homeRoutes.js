@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pet, Owner, OwnerInterest } = require('../models');
+const { Pet, Owner, Interest, OwnerInterest } = require('../models');
 const withAuth = require('../utils/auth');
 
 //main landing page - homepage
@@ -50,14 +50,14 @@ router.get('/', async (req, res) => {
             include: [
                 {
                     model: Owner,
-                    attributes: ['first_name', 'last_name']
+                    attributes: ['first_name', 'last_name'],
                 },
             ],
         });
         const pets = petData.map((pet) => pet.get({ plain: true }));
             console.log(pets);
             res.render('homepage', {
-                pets: pets[0],
+                pets: pets,
                 logged_in: req.session.logged_in
             });
         } catch (err) {
@@ -87,13 +87,14 @@ router.get('/pet/:id', async (req, res) => {
 
 router.get('/profile', withAuth, async (req, res) => {
     try {
+        console.log('about to run profile query')
         const ownerData = await Owner.findByPk(req.session.owner_id, {
             attributes: { exclude: ['password'] },
-            include: [{model: Pet}],
-            
+            include: [{ all: true, nested: true }],
         });
-
+        console.log(ownerData)
         const owner = ownerData.get({ plain: true });
+        console.log(owner)
         res.render('profile', {
             ...owner,
             logged_in: true
@@ -108,9 +109,9 @@ router.get('/login', (req, res) => {
         res.redirect('/profile');
         return;
     }
-
     res.render('login');
 });
+
 
 router.get('/signup', (req, res) => {
     if (req.session.logged_in) {

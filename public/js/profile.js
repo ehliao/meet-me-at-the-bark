@@ -1,14 +1,14 @@
 // const newFormHandler = async (event) => {
 //     event.preventDefault();
   
-//     const profilePhoto = document.querySelector('#').value.trim();
-//     const name = document.querySelector('#').value.trim();
-//     const dob = document.querySelector('#').value.trim();
+//     const name = document.querySelector('#pet-name').value.trim();
+//     const breed = document.querySelector('#breed').value.trim();
+//     const dob = document.querySelector('#birthday').value.trim();
   
-//     if (name && needed_funding && description) {
-//       const response = await fetch(`/api/owners`, {
+//     if (name && breed && dob) {
+//       const response = await fetch(`/api/pets`, {
 //         method: 'POST',
-//         body: JSON.stringify({ profilePhoto, name, dob }),
+//         body: JSON.stringify({ name, breed, dob }),
 //         headers: {
 //           'Content-Type': 'application/json',
 //         },
@@ -21,4 +21,7 @@
 //       }
 //     }
 //   };
-  
+
+//   document
+//   .querySelector('.form-group')
+//   .addEventListener('submit', newFormHandler);
