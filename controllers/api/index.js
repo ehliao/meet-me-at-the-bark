@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const ownerRoutes = require('./ownerRoutes');
 const petRoutes = require('./petRoutes');
-const ownerInterest = require('./ownerInterestRoutes');
+const ownerInterestRoutes = require('./ownerInterestRoutes');
 
 router.use('/owners', ownerRoutes);
 router.use('/pets', petRoutes);
-router.use('/ownerInterest', ownerInterest);
+router.use('/ownerInterest', ownerInterestRoutes);
 
 module.exports = router;
