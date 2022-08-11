@@ -31,7 +31,7 @@
 }
 
 .headerList {
-    margin: 27px 0 5px 15px;
+    margin: 35px 0 5px 15px;
     font-size: 13pt;
 }
 
@@ -40,7 +40,7 @@
 }
 
 nav {
-    margin-left: 47%;
+    margin-left: 40%;
     margin-top: 20px;
 }
 
@@ -131,10 +131,6 @@ footer {
 
 }
 
-#profileImage {
-    /* height: 800px; */
-}
-
 #myFile {
     margin-left: 10px;
 }
@@ -144,7 +140,7 @@ footer {
     position: relative;
 }
 
-.row, profileTitle {
+.row, .profileTitle {
     margin-left: 20px;
 }
 
