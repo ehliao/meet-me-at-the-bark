@@ -19,13 +19,6 @@
 
       </div>
 
-    <h4>These are my interests:</h4>
-    {{#each ownerInterests as |ownerInterest| }}
-    <div class="my-interests">
-      <div class="interests">{{[ownerInterest.interest_id]}}</div>
-    </div>
-    {{/each}}
-
       <div class="uk-margin profile-group">
         <input class="uk-input" type="text" placeholder="Dog's Name" id="pet-name" />
       </div>
@@ -90,18 +83,6 @@
     <div class="uk-margin">
       <button id="saveBtn" class="uk-button uk-button-default" type="submit">Save</button>
     </div>
-
-{{#each pets as |pets| }} {{!-- want to pull all pets in the database --}}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-     {{pet.name}}
-    </h2>
-    <p><img src="{{pet.profilePhoto}}"></p>
-    
-    <p>Owner: {{owner.first_name}}</p>
-  </div>
-{{/each}}
 
 
     <script src="./js/profile.js"></script>
