@@ -4,17 +4,9 @@
 
   </div>
 
-    <h4>These are my interests:</h4>
-    {{#each ownerInterests as |ownerInterest| }}
-    <div class="my-interests">
-      <div class="interests">{{[ownerInterest.interest_id]}}</div>
-    </div>
-    {{/each}}
-
-
   <div class="row">
     <div class=".uk-column-1-6">
-      <h4>Here's my pet(s):</h4>
+      <h4>My pet(s):</h4>
       <div class="my-pet">
         {{#each pets as |pet| }}
         <div class="form-group">
@@ -26,6 +18,13 @@
         {{/each}}
 
       </div>
+
+    <h4>These are my interests:</h4>
+    {{#each ownerInterests as |ownerInterest| }}
+    <div class="my-interests">
+      <div class="interests">{{[ownerInterest.interest_id]}}</div>
+    </div>
+    {{/each}}
 
       <div class="uk-margin profile-group">
         <input class="uk-input" type="text" placeholder="Dog's Name" id="pet-name" />
@@ -65,9 +64,6 @@
 
     </div>
 
-
-
-
     <div class="uk-margin profile-group">
       <label class="uk-text-left" for="form-stacked-select" id="interest_id">Your Interests (Select all that apply):
       </label>
@@ -95,24 +91,17 @@
       <button id="saveBtn" class="uk-button uk-button-default" type="submit">Save</button>
     </div>
 
-  {{#each pets as |pet| }}
-    <div class="row mb-4 pet">
-      <div class="col-md-5">
-        <h2>
-          <a href="/pet/{{pet.id}}">{{pet.name}}</a>
-        </h2>
-      </div>
-    </div>
-    {{/each}}
+{{#each pets as |pets| }} {{!-- want to pull all pets in the database --}}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+     {{pet.name}}
+    </h2>
+    <p><img src="{{pet.profilePhoto}}"></p>
+    
+    <p>Owner: {{owner.first_name}}</p>
+  </div>
+{{/each}}
 
-
-
-
-
-{{!-- 
-    <div>
-      <button href="/ower">Edit My Profile</button>
-      <button href="/pet">Edit My Pet's Profile</button>
-    </div> --}}
 
     <script src="./js/profile.js"></script>
