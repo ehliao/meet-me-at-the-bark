@@ -25,7 +25,7 @@
 
       <div class="uk-margin profile-group">
         <label class="uk-text-left" for="form-stacked-text">Primary Dog Breed:</label>
-        <select class="uk-select" id="breed form-stacked-select" type="text">
+        <select class="uk-select" id="dogBreed form-stacked-select">
           <option id="breedOption"></option>
           <option id="breedOption">Australian Shepard</option>
           <option id="breedOption">Beagle</option>
@@ -54,6 +54,10 @@
         <input type="date" id="birthday" name="birthday">
       </form>
 
+    <div class="uk-margin">
+      <button id="saveBtn" class="uk-button uk-button-default" type="submit">Save</button>
+    </div>
+
 
     </div>
 
@@ -80,9 +84,18 @@
       </form>
     </div>
 
-    <div class="uk-margin">
-      <button id="saveBtn" class="uk-button uk-button-default" type="submit">Save</button>
-    </div>
+<h2>Other Pets on the App</h2>
+<div>
+       {{#each allPets as |pet| }}
+        <div class="form-group">
+          <div class="pet-name">Name: {{pet.name}}</div>
+          <div class="pet-breed">Breed: {{pet.breed}}</div>
+          <div class="pet-age">DOB: {{format_date pet.dob}}</div>
+          <img src="{{pet.profilePhoto}}" class="picture" height="300px" width="300px">
+        </div>
+        {{/each}}
+</div>
 
 
     <script src="./js/profile.js"></script>
+    
