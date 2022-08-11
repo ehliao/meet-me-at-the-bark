@@ -5,7 +5,7 @@ Our website is meant to connect dog owners and their pets with others in their a
 
 Links to Deployed Application and Repository:
 
-[Deployed Application](https://) <br>
+[Deployed Application](https://young-ocean-59194.herokuapp.com/profile)<br>
 [Git Hub Repository](https://github.com/ehliao/meet-me-at-the-bark)<br>
 
 Screenshots of webpages rendered from application  handlebars files: <br><br>
