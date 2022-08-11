@@ -7,12 +7,12 @@
     <h4>These are my interests:</h4>
     {{#each ownerInterests as |ownerInterest| }}
     <div class="my-interests">
-      <div class="interests">{{[ownerInterest.interest_id]}}</div>
+      <div class="interests">{{[ownerInterest.OwnerInterest_id]}}</div>
     </div>
     {{/each}}
 
 
-  <div class="row">
+  <div id= "petInfo" class="row">
     <div class=".uk-column-1-6">
       <h4>Here's my pet(s):</h4>
       <div class="my-pet">
@@ -103,7 +103,7 @@
         </h2>
       </div>
     </div>
-    {{/each}}
+  {{/each}}
 
 
 
