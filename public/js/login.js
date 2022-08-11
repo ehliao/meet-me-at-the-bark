@@ -19,8 +19,6 @@ const loginFormHandler = async (event) => {
   }
 };
 
-
-
 const signupFormHandler = async (event) => {
   event.preventDefault();
   const first_name = document.querySelector('#first-name').value.trim();

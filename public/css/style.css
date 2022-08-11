@@ -1,10 +1,11 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
 :root {
     --main-color: #7E9693;
-    --font-color: hsl(36, 73%, 66%);
+    --font-color: #f3db0c;
 }
 
 .pageHeader {
@@ -158,3 +159,9 @@ footer {
 .uk-checkbox {
     margin-left: 15px;
 }
+
+#interest_id {
+    display: flex;
+}
+
+
