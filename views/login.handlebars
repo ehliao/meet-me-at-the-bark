@@ -1,20 +1,20 @@
-<div class="col-md-6">
-  <h2>Login</h2>
+  <div id="form">
+    <h2 class="loginHeader uk-text-center">Login to Profile</h2>
+  
+    <form class="form login-form uk-width-expand@m">
+      <div class="uk-margin form-group">
+          <input class="uk-input" type="text" placeholder ="E-mail Address" id="email-login"/>
+      </div>
 
-  <form class="form login-form">
-    <div class="form-group">
-      <label for="email-login">email:</label>
-      <input class="form-input" type="text" id="email-login" />
-    </div>
-    <div class="form-group">
-      <label for="password-login">password:</label>
-      <input class="form-input" type="password" id="password-login" />
-    </div>
-    <div class="form-group">
-      <button class="btn btn-primary" type="submit">login</button>
-    </div>
-  </form>
+      <div class="uk-margin form-group">
+          <input class="uk-input" type="password" placeholder ="Password" id="password-login" />
+      </div>
 
-</div>
+      <div class="uk-margin uk-text-center">
+        <button class="uk-button uk-button-default" type="submit">Login</button>
+      </div>
 
-  <script src="/public/js/login.js"></script>
+
+    </form>
+  </div>
+  <script src="./js/login.js"></script>

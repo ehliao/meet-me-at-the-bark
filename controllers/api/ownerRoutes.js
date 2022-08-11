@@ -8,6 +8,7 @@ router.post('/', async (req, res) => {
         req.session.save(() => {
             req.session.owner_id = ownerData.id;
             req.session.logged_in = true;
+
             res.status(200).json(ownerData);
         });
     } catch (err) {
@@ -18,7 +19,7 @@ router.post('/', async (req, res) => {
 router.post('/login', async (req, res) => {
     try {
         const ownerData = await Owner.findOne({ where: { email: req.body.email } });
-
+        console.log(ownerData);
         if (!ownerData) {
             res
                 .status(400)
@@ -26,7 +27,7 @@ router.post('/login', async (req, res) => {
             return;
         }
 
-        const ownerPassword = await ownerData.checkPassword(req.body.password);
+        const ownerPassword = ownerData.checkPassword(req.body.password);
 
         if (!ownerPassword) {
             res
@@ -38,20 +39,24 @@ router.post('/login', async (req, res) => {
         req.session.save(() => {
             req.session.owner_id = ownerData.id;
             req.session.logged_in = true;
+            console.log("set logged in session variable")
             res.json({ owner: ownerData, message: "Logged in" });
         });
+        
     } catch (err) {
         res.status(400).json(err);
     }
 });
 
 router.post('/logout', (req, res) => {
+    console.log(req.session)
     if (req.session.logged_in) {
         req.session.destroy(() => {
             res.status(204).end();
         });
     } else {
-        res.status(404).end();
+        console.log("sending 500")
+        res.status(500).end();
     }
 });
 
