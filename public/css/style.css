@@ -40,8 +40,8 @@
 }
 
 nav {
-    margin-left: 37%;
-    margin-top: 25px;
+    margin-left: 40%;
+    margin-top: 20px;
 }
 
 .navBtn {
@@ -131,7 +131,7 @@ footer {
 
 }
 
-#myFile, .my-pet {
+#myFile {
     margin-left: 10px;
 }
 

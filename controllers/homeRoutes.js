@@ -104,6 +104,25 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 });
 
+router.get('/profile', withAuth, async (req, res) => {
+    try {
+        console.log('about to run profile query')
+        const ownerData = await Pet.findByPk(req.session.pet_id, {
+            attributes: { },
+            include: [{ all: true, nested: true }],
+        });
+        console.log(petData)
+        const pet = petData.get({ plain: true });
+        console.log(pet)
+        res.render('profile', {
+            ...pet,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/profile');
