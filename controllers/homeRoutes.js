@@ -92,14 +92,19 @@ router.get('/profile', withAuth, async (req, res) => {
             attributes: { exclude: ['password'] },
             include: [{ all: true, nested: true }],
         });
+        const petData = await Pet.findAll()
+        console.log(petData)
+        const allPets = petData.map((pet) => pet.get({ plain: true }));
         console.log(ownerData)
         const owner = ownerData.get({ plain: true });
         console.log(owner)
         res.render('profile', {
+            allPets,
             ...owner,
             logged_in: true
         });
     } catch (err) {
+        console.log(err)
         res.status(500).json(err);
     }
 });
