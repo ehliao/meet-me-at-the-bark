@@ -83,13 +83,15 @@
         <input type="file" id="myFile" name="foo">
       </form>
     </div>
+
+<h2>Other Pets on the App</h2>
 <div>
        {{#each allPets as |pet| }}
         <div class="form-group">
           <div class="pet-name">Name: {{pet.name}}</div>
           <div class="pet-breed">Breed: {{pet.breed}}</div>
-          <img src="{{pet.profilePhoto}}" class="picture" height="300px" width="300px">
           <div class="pet-age">DOB: {{format_date pet.dob}}</div>
+          <img src="{{pet.profilePhoto}}" class="picture" height="300px" width="300px">
         </div>
         {{/each}}
 </div>
